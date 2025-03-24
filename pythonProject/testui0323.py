@@ -48,26 +48,7 @@ if __name__ == '__main__':
     os.makedirs(report_dir, exist_ok=True)  # 确保目录存在
     print(f"测试报告路径: {report_path}")  # 调试输出
     pytest.main(['-s', __file__, f'--html={report_path}', '--self-contained-html'])
+    # pytest.main("-s  testui0323.py")
 
-# import os
-# import pytest
-#
-#
-# class TestClass:
-#     def test1(self):
-#         assert True
-#
-#
-# if __name__ == '__main__':
-#     # 强制使用绝对路径
-#     report_dir = os.path.abspath(r'F:\testui\pythonProject\reports')
-#     os.makedirs(report_dir, exist_ok=True)
-#     report_path = os.path.join(report_dir, 'report.html')
-#
-#     # 调试输出
-#     print(f"报告路径: {report_path}")
-#     print(f"当前工作目录: {os.getcwd()}")
-#
-#     # 运行测试并生成报告
-#     exit_code = pytest.main(['-s', '-v', __file__, f'--html={report_path}', '--self-contained-html'])
-#     print(f"pytest 退出码: {exit_code}")
+
+# python3 -m pytest testui0323.py --html=reports/report.html --self-contained-html
